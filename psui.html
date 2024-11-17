@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ar">
 <head>
     <meta charset="UTF-8">
@@ -63,20 +63,42 @@
                 }
             </style>
         </head>
-        <body>
-            <div class="icon-container">
-                <!-- WhatsApp Icon -->
-                <a href="https://wa.me/+201154624698" class="whatsapp" target="_blank" title="Chat on WhatsApp">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
-                <!-- Telegram Icon -->
-                <a href="https://t.me/+201158279543" class="telegram" target="_blank" title="Chat on Telegram">
-                    <i class="fab fa-telegram"></i>
-                </a>
-            </div>
-        </body>
-        </html>
-        
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Link</title>
+    <style>
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Button -->
+    <a href="whatsapp://send?phone=+201158279543" class="whatsapp-button" target="_blank">
+        Chat on WhatsApp
+    </a>
+
+    <script>
+        // Fallback to the web version if the app scheme fails (on desktop or unsupported mobile browsers)
+        document.querySelector('.whatsapp-button').addEventListener('click', function(event) {
+            setTimeout(function() {
+                window.location = 'https://wa.me/201158279543'; // Fallback to WhatsApp web
+            }, 1000); // 1-second delay for the app to open
+        });
+    </script>
+</body>
+</html>
+
     <script src="script.js"></script>
   </body>
   </html>
